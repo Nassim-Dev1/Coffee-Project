@@ -1,326 +1,392 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css" >
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Playfair+Display:wght@600;700&family=Chewy&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- ===================== NAVBAR ===================== -->
+    <nav id="navbar">
 
+        <a href="#hero" id="nav-pic" aria-label="Coffee House home">
+            <img id="nav-logo" src="https://raw.githubusercontent.com/thego4tnas/Coffee-Project/e3e2f76967a775d99a274ada4e02f7a42e217588/logo%20best.png" alt="Coffee House logo">
+        </a>
 
- <nav id="navbar">
+        <ul class="nav-links" id="nav-menu">
+            <li class="link"><a href="#hero">HOME</a></li>
+            <li class="link"><a href="#EXPRNCE">OFFERS</a></li>
+            <li class="link"><a href="#menu-section">MENU</a></li>
+        </ul>
 
-   <div id="nav-pic">
-        <img id="nav-logo" src="https://github.com/Nassim-Dev1/Coffee-Project/blob/main/imgs/logo%20best%20(1).png?raw=true" alt="logo" >
-   </div>
+        <div id="nav-contact">
+            <a href="#contact" id="cntct-btn">CONTACT</a>
+        </div>
 
-   <ul class="nav-links">
-       <li class="link"><a href="#hero">HOME</a></li>
-       <li class="link"><a href=".menu-title">MENU</a></li>
-       <li class="link"><a href=".choos-us">ABOUT</a></li>
-   </ul>
+        <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
 
-   <div id="nav-contact">
-        <button id="cntct-btn"><a href="https://wa.me/213559959122" target="_blank">CONTACT</a></button>
-   </div>
-     
-     
-</nav>
+    </nav>
 
-
-<section id="hero">
-
-    <div id="hero-text">
-        <h1 id="hero-titel">Experience the Art of <span class="hro">Premium Coffee</span></h1>
-        <p id="hero-dp">Sourced from the finest plantations, our beans are roasted to perfection to bring you a rich, aromatic experience that awakens your senses every morning.</p>
-        <button id="hero-btn">Rate us ★</button>
-    </div>
-
-
-    <div id="hero-p">
-        <img id="hero-pic" src="https://raw.githubusercontent.com/thego4tnas/Coffee-Project/374e0f3591dab5c233d3c32d264e23db7dc7e059/imgs/hero1.jpg" alt="hero image" >
-    </div>
-
-
-
-</section>
-
-
-<section id="EXPRNCE">
-
-    <div id="exp-card"> 
-        <h2 id="exp-titel"> <ins>The Experience</ins> </h2>
-        <p id="exp-dp"> We believe that coffee is more than just a morning  routine;it is a ritual of peace.
-                            Crafted<br> with passion using 100% organic beans from high-altitude farms.
-                            Roasted in<br> small batches to preserve every delicate note. </p>
-    
-    
-    </div>
-        
-    
-</section>
-
-<hr class="hr1">   
-    
-
- <div id="Coffees">
-
-    
-
-    <div class="Coffees-items">
-
-             <img id="Coffees-link" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/espresso%20(2).webp?raw=true" alt="Espreso" >
-        
-
-             
-             <h2 class="namehead">Espresso</h2>
-
-
-
-             <p class="dp">A bold, concentrated masterpiece
-             with a golden crema. The perfect fuel for a focused mind.</p>
-
-    </div>
-
-    <div class="Coffees-items">
-
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Cappuccino.webp?raw=true" alt="Cappuccino" >
-        
-
-             
-             <h2 class="namehead">Cappuccino</h2>
-
-             <p class="dp">Indulge in the perfect harmony of espresso, steamed milk,
-                       and a thick, airy layer of froth.
-             </p>
-
-    </div>
-
-    <div class="Coffees-items">
-
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Mocaccino%20(2).webp?raw=true" alt="Mocaccino" >
-        
-
-             
-             <h2 class="namehead">Mocaccino</h2>
-
-             <p class="dp">The ultimate treat combining our signature espresso
-                 with premium chocolate and creamy milk.
-             </p>
-    </div>
-
-    <div class="Coffees-items">
-
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Classico%20latte.webp?raw=true" alt="Classico latte" >
-        
-
-            
-             <h2 class="namehead">Classico latte</h2>
-
-             <p class="dp">A delicate balance of rich espresso and silky steamed milk.
-                 It’s like a warm hug in a cup.</p>
-    </div>
-
-      <div id="Coffees-text">
-            <h2 style="color:#7F5539">Most Loved Coffees</h2>
-      </div>    
-
- </div>
-
-
- <hr class="hr2">
-
-
-
-
-
-<section class="menu-section">
-    
-    <!-- <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/background/left%20up%20blob%20.webp?raw=true" class="leftUp-blob" > -->
-    
-    <h2 class="menu-title">Full Menu</h2>
-    <div class="menu-grid">
-
-        <div class="menu-card1">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Cappuccino.webp?raw=true" alt="cappuccino" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">Cappuccino</span>
-                <span class="menu-price">180 DA</span>
+    <!-- Mobile Navigation Drawer & Overlay -->
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay" aria-hidden="true"></div>
+    <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-brand">
+                <img src="https://raw.githubusercontent.com/thego4tnas/Coffee-Project/e3e2f76967a775d99a274ada4e02f7a42e217588/logo%20best.png" alt="Coffee House logo" class="mobile-nav-logo">
+                <span class="mobile-brand-title">Coffee House</span>
+            </div>
+            <button id="mobile-nav-close" class="mobile-nav-close" type="button" aria-label="Close navigation menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-nav-link"><i class="fa-solid fa-house"></i> <span>HOME</span></a></li>
+            <li><a href="#EXPRNCE" class="mobile-nav-link"><i class="fa-solid fa-mug-hot"></i> <span>EXPERIENCE</span></a></li>
+            <li><a href="#menu-section" class="mobile-nav-link"><i class="fa-solid fa-utensils"></i> <span>MENU</span></a></li>
+            <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-phone"></i> <span>CONTACT</span></a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+            <a href="#contact" class="mobile-drawer-btn">CONTACT US</a>
+            <div class="mobile-drawer-socials">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
+    </aside>
 
-        <div class="menu-card1">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Caramel%20Macchiato.webp?raw=true" alt="Caramel Macchiato" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">Caramel Macchiato</span>
-                <span class="menu-price">260 DA</span>
-            </div>
+    <!-- ===================== HERO ===================== -->
+    <section id="hero">
+
+        <div id="hero-text">
+            <h1 id="hero-titel">Experience the Art of <span class="hro">Premium Coffee</span></h1>
+            <p id="hero-dp">Sourced from the finest plantations, our beans are roasted to perfection to bring you a rich, aromatic experience that awakens your senses every morning.</p>
+            <button id="hero-btn" type="button">Rate us ★</button>
         </div>
 
-        <div class="menu-card1">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Classico%20latte.webp?raw=true" alt="Classico latte" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">Classico latte</span>
-                <span class="menu-price">200 DA</span>
-            </div>
+        <div id="hero-p">
+            <img id="hero-pic" src="https://raw.githubusercontent.com/thego4tnas/Coffee-Project/374e0f3591dab5c233d3c32d264e23db7dc7e059/imgs/hero1.jpg" alt="Premium coffee cup">
         </div>
 
-        <div class="menu-card2">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/espresso%20(2).webp?raw=true" alt="espresso" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">espresso</span>
-                <span class="menu-price">120 DA</span>
-            </div>
-        </div>
-
-        <div class="menu-card2">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Americano.webp?raw=true" alt="Americano" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">Americano</span>
-                <span class="menu-price">140 DA</span>
-            </div>
-        </div>
-
-        <div class="menu-card2">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Spanish%20Latte.webp?raw=true" alt="Spanish Latte" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">Spanish Latte</span>
-                <span class="menu-price">280 DA</span>
-            </div>
-        </div>
-
-        <div class="menu-card3">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Iced%20Latte.webp?raw=true" alt="Iced Latte" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">Iced Latte</span>
-                <span class="menu-price">250 DA</span>
-            </div>
-        </div>
-
-        <div class="menu-card3">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Turkish%20Coffee.webp?raw=true" alt="Turkish Coffee" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">Turkish Coffee</span>
-                <span class="menu-price">150 DA</span>
-            </div>
-        </div>
-
-        <div class="menu-card3">
-            <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Mocaccino%20(2).webp?raw=true" alt="Mocaccino" class="menu-img">
-            <div class="menu-info">
-                <span class="menu-name">Mocaccino</span>
-                <span class="menu-price">220 DA</span>
-            </div>
-        </div>
-
-    </div>
-
-    
-</section>
-
-
-<section class="choos-us">
-
-     <h2>WHY CHOOSE US</h2> 
-
-     <div class="choos-items" >
-
-        <div class="items"> 
-            <img class="choos-img" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/beans.webp?raw=true" alt="bean icon"> 
-            <h3>Premium Beans</h3> 
-            <p class="h3-dp">carefully select the finest world-class harvests for a superior taste.</p> 
-        </div> 
-
-        <div class="items"> 
-            <img class="choos-img" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Freshly%20Roasted.webp?raw=true" alt="fresh icon">
-            <h3>Freshly Roasted</h3> 
-            <p class="h3-dp">Daily small-batch roasting to lock in the rich, authentic flavors.</p> 
-        </div> 
-        
-        <div class="items"> 
-            <img class="choos-img" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Expert%20Baristas.webp?raw=true" alt="expert baristas icon"> 
-            <h3>Expert Baristas</h3> 
-            <p class="h3-dp">Crafted by professionals who treat every cup as a work of art.</p> 
-        </div>
-        
-        <div class="item4">
-             <img class="choos-img" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Ethically%20Sourced.webp?raw=true" alt="ethical icon"> 
-             <h3>Ethically Sourced</h3> 
-             <p class="h3-dp">Supporting local farmers and sustainable practices for a better planet.</p> 
-        </div> 
-
-     </div> 
     </section>
 
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="EXPRNCE">
 
+        <div id="exp-card">
+            <div class="exp-header">
+                <span class="exp-badge"><i class="fa-solid fa-mug-hot"></i> OUR RITUAL & PASSION</span>
+                <h2 id="exp-titel">The Experience</h2>
+                <div class="exp-divider"></div>
+                <p id="exp-dp">We believe that coffee is more than just a morning routine; it is a ritual of peace and mindfulness. Crafted with passion using 100% organic beans from high-altitude farms, roasted in small batches to preserve every delicate note.</p>
+            </div>
 
+            <div class="exp-pillars">
+                <div class="exp-pillar-card">
+                    <div class="pillar-icon-wrap">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3>100% Organic Origins</h3>
+                    <p>Sustainably harvested from high-altitude volcanic farms to deliver unmatched purity and rich aromatic depth.</p>
+                </div>
 
+                <div class="exp-pillar-card">
+                    <div class="pillar-icon-wrap">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <h3>Artisanal Roasting</h3>
+                    <p>Slowly roasted in daily micro-batches to unlock nuanced tasting notes and seal in optimal freshness.</p>
+                </div>
 
-    <footer>
+                <div class="exp-pillar-card">
+                    <div class="pillar-icon-wrap">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3>Mindful Ritual</h3>
+                    <p>Every pour is crafted with intention to bring you a serene, uplifting pause in the middle of a busy day.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <hr class="hr1">
+
+    <!-- ===================== MOST LOVED COFFEES ===================== -->
+    <section id="Coffees">
+
+        <div id="Coffees-text">
+            <span class="coffees-badge"><i class="fa-solid fa-fire"></i> OUR SIGNATURE BREWS</span>
+            <h2>Most Loved Coffees</h2>
+            <div class="coffees-divider"></div>
+            <p class="coffees-subtitle">Handcrafted favorites cherished by our community for their rich profile, delicate balance, and captivating aroma.</p>
+        </div>
+
+        <div class="coffees-grid">
+            <div class="Coffees-items">
+                <div class="coffee-img-wrap">
+                    <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/espresso%20(2).webp?raw=true" alt="Espresso">
+                    <span class="coffee-tag">Bold & Intense</span>
+                </div>
+                <div class="coffee-content">
+                    <div class="coffee-title-row">
+                        <h3 class="namehead">Espresso</h3>
+                        <span class="coffee-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                    </div>
+                    <p class="dp">A bold, concentrated masterpiece with a golden crema. The perfect fuel for a focused mind.</p>
+                    <div class="coffee-notes">
+                        <span>Rich Crema</span>
+                        <span>Single Origin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Coffees-items">
+                <div class="coffee-img-wrap">
+                    <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Cappuccino.webp?raw=true" alt="Cappuccino">
+                    <span class="coffee-tag">Velvety Smooth</span>
+                </div>
+                <div class="coffee-content">
+                    <div class="coffee-title-row">
+                        <h3 class="namehead">Cappuccino</h3>
+                        <span class="coffee-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                    </div>
+                    <p class="dp">Indulge in the perfect harmony of espresso, steamed milk, and a thick, airy layer of froth.</p>
+                    <div class="coffee-notes">
+                        <span>Airy Froth</span>
+                        <span>Balanced</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Coffees-items">
+                <div class="coffee-img-wrap">
+                    <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Mocaccino%20(2).webp?raw=true" alt="Mocaccino">
+                    <span class="coffee-tag">Sweet & Rich</span>
+                </div>
+                <div class="coffee-content">
+                    <div class="coffee-title-row">
+                        <h3 class="namehead">Mocaccino</h3>
+                        <span class="coffee-rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="dp">The ultimate treat combining our signature espresso with premium chocolate and creamy milk.</p>
+                    <div class="coffee-notes">
+                        <span>Dark Chocolate</span>
+                        <span>Creamy Milk</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Coffees-items">
+                <div class="coffee-img-wrap">
+                    <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Classico%20latte.webp?raw=true" alt="Classico latte">
+                    <span class="coffee-tag">Silky Harmony</span>
+                </div>
+                <div class="coffee-content">
+                    <div class="coffee-title-row">
+                        <h3 class="namehead">Classico latte</h3>
+                        <span class="coffee-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                    </div>
+                    <p class="dp">A delicate balance of rich espresso and silky steamed milk. It's like a warm hug in a cup.</p>
+                    <div class="coffee-notes">
+                        <span>Silky Texture</span>
+                        <span>Comforting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <hr class="hr2">
+
+    <!-- ===================== FULL MENU ===================== -->
+    <section class="menu-section" id="menu-section">
+
+        <h2 class="menu-title">Full Menu</h2>
+
+        <div class="menu-grid">
+
+            <div class="menu-card1">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Cappuccino.webp?raw=true" alt="Cappuccino" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Cappuccino</span>
+                    <span class="menu-price">180 DA</span>
+                </div>
+            </div>
+
+            <div class="menu-card1">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Caramel%20Macchiato.webp?raw=true" alt="Caramel Macchiato" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Caramel Macchiato</span>
+                    <span class="menu-price">260 DA</span>
+                </div>
+            </div>
+
+            <div class="menu-card1">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Classico%20latte.webp?raw=true" alt="Classico latte" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Classico latte</span>
+                    <span class="menu-price">200 DA</span>
+                </div>
+            </div>
+
+            <div class="menu-card2">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/espresso%20(2).webp?raw=true" alt="Espresso" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Espresso</span>
+                    <span class="menu-price">120 DA</span>
+                </div>
+            </div>
+
+            <div class="menu-card2">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Americano.webp?raw=true" alt="Americano" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Americano</span>
+                    <span class="menu-price">140 DA</span>
+                </div>
+            </div>
+
+            <div class="menu-card2">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Spanish%20Latte.webp?raw=true" alt="Spanish Latte" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Spanish Latte</span>
+                    <span class="menu-price">280 DA</span>
+                </div>
+            </div>
+
+            <div class="menu-card3">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Iced%20Latte.webp?raw=true" alt="Iced Latte" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Iced Latte</span>
+                    <span class="menu-price">250 DA</span>
+                </div>
+            </div>
+
+            <div class="menu-card3">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/menu/Turkish%20Coffee.webp?raw=true" alt="Turkish Coffee" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Turkish Coffee</span>
+                    <span class="menu-price">150 DA</span>
+                </div>
+            </div>
+
+            <div class="menu-card3">
+                <img src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Mocaccino%20(2).webp?raw=true" alt="Mocaccino" class="menu-img">
+                <div class="menu-info">
+                    <span class="menu-name">Mocaccino</span>
+                    <span class="menu-price">220 DA</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================== WHY CHOOSE US ===================== -->
+    <section class="choos-us">
+
+        <h2>WHY CHOOSE US</h2>
+
+        <div class="choos-items">
+
+            <div class="items">
+                <img class="choos-img" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/beans.webp?raw=true" alt="Premium coffee beans">
+                <div>
+                    <h3>Premium Beans</h3>
+                    <p class="h3-dp">Carefully select the finest world-class harvests for a superior taste.</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <img class="choos-img" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Freshly%20Roasted.webp?raw=true" alt="Freshly roasted coffee">
+                <div>
+                    <h3>Freshly Roasted</h3>
+                    <p class="h3-dp">Daily small-batch roasting to lock in the rich, authentic flavors.</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <img class="choos-img" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Expert%20Baristas.webp?raw=true" alt="Expert baristas">
+                <div>
+                    <h3>Expert Baristas</h3>
+                    <p class="h3-dp">Crafted by professionals who treat every cup as a work of art.</p>
+                </div>
+            </div>
+
+            <div class="item4">
+                <img class="choos-img" src="https://github.com/thego4tnas/Coffee-Project/blob/main/imgs/Ethically%20Sourced.webp?raw=true" alt="Ethically sourced coffee">
+                <div>
+                    <h3>Ethically Sourced</h3>
+                    <p class="h3-dp">Supporting local farmers and sustainable practices for a better planet.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer id="contact">
 
         <div class="footer-left">
-            <span style="text-align: center;">Contact US</span>
-            
-            <a href="https://www.instagram.com/the.go4t.nas?igsh=YjEzazgwNmhveDlx"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.instagram.com/the.go4t.nas?igsh=YjEzazgwNmhveDlx"><i class="fa-brands fa-facebook"></i></a>
+            <span>Contact US</span>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
         </div>
 
         <div class="footer-center">
-        <p>© 2026 Coffee House. All rights reserved.</p>
+            <p>&copy; 2026 Coffee House. All rights reserved.</p>
         </div>
 
         <div class="footer-right">
-            <img src="https://github.com/Nassim-Dev1/Coffee-Project/blob/main/imgs/logo%20best%20(1).png?raw=true" alt="logo" >
+            <img src="https://raw.githubusercontent.com/thego4tnas/Coffee-Project/e3e2f76967a775d99a274ada4e02f7a42e217588/logo%20best.png" alt="Coffee House logo">
         </div>
 
     </footer>
 
-
-<hr class="hr3">
-
+    <hr class="hr3">
 
 
+    <!-- ===================== RATING MODAL ===================== -->
+    <div id="rating-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="rating-title">
+        <div class="modal-box">
+            <button class="modal-close" type="button" aria-label="Close rating dialog">&times;</button>
+            <h2 id="rating-title">Rate Your Experience</h2>
+            <p class="modal-subtitle">How was your coffee?</p>
 
-<div class="rating-modal hidden" id="ratingModal">
-  <div class="rating-box">
-    <h3>Rate Your Experience</h3>
-    <div class="stars">
-      <span class="star" data-value="1">★</span>
-      <span class="star" data-value="2">★</span>
-      <span class="star" data-value="3">★</span>
-      <span class="star" data-value="4">★</span>
-      <span class="star" data-value="5">★</span>
+            <div class="stars-container" role="radiogroup" aria-label="Star rating">
+                <button class="star" type="button" role="radio" aria-checked="false" data-rating="1" aria-label="1 star">&#9733;</button>
+                <button class="star" type="button" role="radio" aria-checked="false" data-rating="2" aria-label="2 stars">&#9733;</button>
+                <button class="star" type="button" role="radio" aria-checked="false" data-rating="3" aria-label="3 stars">&#9733;</button>
+                <button class="star" type="button" role="radio" aria-checked="false" data-rating="4" aria-label="4 stars">&#9733;</button>
+                <button class="star" type="button" role="radio" aria-checked="false" data-rating="5" aria-label="5 stars">&#9733;</button>
+            </div>
+
+            <p id="rating-text" class="rating-text">Tap a star to rate</p>
+
+            <textarea id="rating-feedback" placeholder="Tell us more about your experience (optional)" rows="3"></textarea>
+
+            <button id="submit-rating" type="button" disabled>Submit Rating</button>
+
+            <div id="rating-success" class="rating-success">
+                <span class="success-icon">&#10003;</span>
+                <p>Thank you for your feedback!</p>
+            </div>
+        </div>
     </div>
-    <button class="submit-rating">Submit</button>
-    <span class="close-modal" id="closeModal">✕</span>
-  </div>
-</div>
 
+    <script src="script.js"></script>
 
-<div class="custom-alert" id="customAlert">
-  <div class="custom-alert-box">
-    <p class="custom-alert-msg" id="alertMsg">Thank you for your rating! ⭐</p>
-    <button class="custom-alert-btn" id="alertOk">OK</button>
-  </div>
-</div>
-
-
-
-<script src="script.js"></script>
 </body>
-
-
-
-
-
-
 
 </html>
