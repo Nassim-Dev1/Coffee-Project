@@ -1,6 +1,39 @@
 "use strict";
 
 /* ============================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================ */
+
+const revealTargets = document.querySelectorAll(
+    "#hero-text, #hero-p, #exp-card, #Coffees-text, .Coffees-items, " +
+    ".menu-header, .menu-tabs, .menu-card, .choos-header, .items, .item4, " +
+    ".footer-col, .footer-bottom"
+);
+
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    revealTargets.forEach((element) => element.classList.add("is-visible"));
+} else if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -32px 0px"
+    });
+
+    revealTargets.forEach((element) => {
+        element.classList.add("scroll-reveal");
+        revealObserver.observe(element);
+    });
+} else {
+    revealTargets.forEach((element) => element.classList.add("is-visible"));
+}
+
+/* ============================================
    SMOOTH SCROLL FOR ALL ANCHOR LINKS
    ============================================ */
 
@@ -42,6 +75,39 @@ window.addEventListener("scroll", () => {
     }
 }, { passive: true });
 
+const pageNavLinks = document.querySelectorAll(
+    ".nav-links a, #cntct-btn, .mobile-nav-link"
+);
+const pageSections = [...new Set(Array.from(pageNavLinks)
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter((target) => target && target !== navbar))];
+
+if ("IntersectionObserver" in window && pageSections.length) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        const visibleSection = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (!visibleSection) return;
+
+        const activeHref = `#${visibleSection.target.id}`;
+        pageNavLinks.forEach((link) => {
+            const isCurrent = link.getAttribute("href") === activeHref;
+            link.classList.toggle("active", isCurrent);
+            if (isCurrent) {
+                link.setAttribute("aria-current", "location");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    }, {
+        rootMargin: "-18% 0px -62% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1]
+    });
+
+    pageSections.forEach((section) => sectionObserver.observe(section));
+}
+
 /* ============================================
    MOBILE NAVIGATION DRAWER & OVERLAY
    ============================================ */
@@ -53,24 +119,33 @@ const mobileNavClose = document.getElementById("mobile-nav-close");
 
 function openMobileNav() {
     if (!mobileNavDrawer) return;
+    mobileNavDrawer.inert = false;
     mobileNavDrawer.classList.add("active");
     mobileNavOverlay?.classList.add("active");
     menuToggle?.classList.add("active");
     menuToggle?.setAttribute("aria-expanded", "true");
+    menuToggle?.setAttribute("aria-label", "Close menu");
     mobileNavDrawer.setAttribute("aria-hidden", "false");
     mobileNavOverlay?.setAttribute("aria-hidden", "false");
     document.body.classList.add("mobile-nav-open");
+    mobileNavClose?.focus({ preventScroll: true });
 }
 
 function closeMobileNav() {
     if (!mobileNavDrawer) return;
+    const wasOpen = mobileNavDrawer.classList.contains("active");
     mobileNavDrawer.classList.remove("active");
     mobileNavOverlay?.classList.remove("active");
     menuToggle?.classList.remove("active");
     menuToggle?.setAttribute("aria-expanded", "false");
+    menuToggle?.setAttribute("aria-label", "Open menu");
     mobileNavDrawer.setAttribute("aria-hidden", "true");
     mobileNavOverlay?.setAttribute("aria-hidden", "true");
     document.body.classList.remove("mobile-nav-open");
+    mobileNavDrawer.inert = true;
+    if (wasOpen && menuToggle?.offsetParent !== null) {
+        menuToggle?.focus({ preventScroll: true });
+    }
 }
 
 function toggleMobileNav() {
@@ -101,6 +176,35 @@ window.addEventListener("resize", () => {
     if (window.innerWidth > 1024 && mobileNavDrawer?.classList.contains("active")) {
         closeMobileNav();
     }
+});
+
+/* ============================================
+   MENU CATEGORY FILTER TABS
+   ============================================ */
+
+const menuTabs = document.querySelectorAll(".menu-tab");
+const menuCards = document.querySelectorAll(".menu-card");
+
+menuTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        const filter = tab.dataset.filter;
+
+        menuTabs.forEach((t) => {
+            const isActive = t === tab;
+            t.classList.toggle("active", isActive);
+            t.setAttribute("aria-selected", String(isActive));
+        });
+
+        menuCards.forEach((card) => {
+            const matches = filter === "all" || card.dataset.category === filter;
+            if (matches) {
+                card.style.display = "";
+                card.style.animation = "cardFadeIn 0.35s ease forwards";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
 });
 
 /* ============================================
