@@ -79,8 +79,13 @@ const pageNavLinks = document.querySelectorAll(
     ".nav-links a, #cntct-btn, .mobile-nav-link"
 );
 const pageSections = [...new Set(Array.from(pageNavLinks)
-    .map((link) => document.querySelector(link.getAttribute("href")))
+    .map((link) => {
+        const href = link.getAttribute("href");
+        if (!href || !href.startsWith("#")) return null;   // skip external links
+        return document.querySelector(href);
+    })
     .filter((target) => target && target !== navbar))];
+
 
 if ("IntersectionObserver" in window && pageSections.length) {
     const sectionObserver = new IntersectionObserver((entries) => {
